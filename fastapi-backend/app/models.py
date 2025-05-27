@@ -28,6 +28,7 @@ class UserBase(SQLModel):
     email: EmailStr = Field(index=True, max_length=255)
     is_active: bool = True
     is_superuser: bool = False
+    hospital_id: uuid.UUID
     full_name: str | None = Field(default=None, max_length=255)
 
 class ItemBase(SQLModel):

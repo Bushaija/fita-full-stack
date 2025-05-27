@@ -62,7 +62,6 @@ def login_for_frontend(session: SessionDep, login_data: LoginRequest) -> LoginRe
     JSON-based login for frontend applications
     Returns access token and user information
     """
-    print(login_data)
     user = crud.authenticate(
         session=session, email=login_data.email.lower(), password=login_data.password.lower()
     )
